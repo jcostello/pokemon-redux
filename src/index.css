@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --borderWidth: 7px;
+  --height: 24px;
+  --width: 12px;
+  --borderColor: #78b13f;
+}
+
+.search-container {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.circle {
+  display: inline-table;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+
+  background-color: #ff4040;
+  border-radius: 50%;
+}
+
+.circle_content {
+  color: white;
+  font-weight: bold;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.pokemon-card {
+  cursor: pointer;
+}
+
+.pokemon-card .spinner-overlay {
+  max-height: 236px;
+}
+
+.check-container {
+  position: relative;
+  left: 90px;
+  bottom: 20px;
+}
+
+.check {
+  position: absolute;
+  display: inline-block;
+  transform: rotate(45deg);
+  height: var(--height);
+  width: var(--width);
+  border-bottom: var(--borderWidth) solid var(--borderColor);
+  border-right: var(--borderWidth) solid var(--borderColor);
+}
+
+.spinner-overlay {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner-container {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(195, 195, 195, 0.6);
+  border-radius: 50%;
+  border-top-color: #636767;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+
+  @keyframes spin {
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes spin {
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+}
